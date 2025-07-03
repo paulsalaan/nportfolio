@@ -4,7 +4,6 @@ import Interture1 from "@/assets/interture_1.png";
 import Interture2 from "@/assets/interture_2.png";
 import Affitnity1 from "@/assets/affitnity_1.png";
 import Affitnity2 from "@/assets/affitnity_2.png";
-import Affitnity3 from "@/assets/affitnity_3.png";
 import Exerease1 from "@/assets/exerease_1.png";
 import Exerease2 from "@/assets/exerease_2.png";
 import Exerease3 from "@/assets/exerease_3.png";
