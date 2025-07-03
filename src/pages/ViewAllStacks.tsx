@@ -1,5 +1,4 @@
 import { AnimatedLink } from "@/components/AnimatedLink";
-import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
 const ViewAllStacks = () => {
@@ -113,10 +112,6 @@ const ViewAllStacks = () => {
 
         {/* line-div */}
         <div className="block w-full mt-20 mb-15 bg-line/40 h-[1.5px] md:md-8 lg:mt-5 lg:mb-10 lg:md:-10"></div>
-
-        <div className="">
-          <Footer />
-        </div>
       </section>
     </>
   );
