@@ -82,7 +82,7 @@ const FloatingActions: React.FC = () => {
             </a>
 
             <div
-              className={`absolute top-1/2 -translate-y-1/2 h-12 px-3 py-3 bg-hover-btn text-button-text rounded flex items-center gap-3 text-base overflow-hidden
+              className={`hidden absolute top-1/2 -translate-y-1/2 h-12 px-3 py-3 bg-hover-btn text-button-text rounded lg:flex items-center gap-3 text-base overflow-hidden
               transition-all duration-400 ease-in-out cursor-pointer ${
                 hovered === "cv" ? "opacity-100 w-[15rem]" : "opacity-0 w-0"
               }`}

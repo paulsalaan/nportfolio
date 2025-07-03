@@ -6,7 +6,7 @@ import ViewAllStacks from "./pages/ViewAllStacks";
 
 const MainRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/nportfolio">
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/viewallstack" element={<ViewAllStacks />} />

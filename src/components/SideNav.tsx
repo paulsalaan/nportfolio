@@ -40,7 +40,7 @@ const SideNav: React.FC<SideBarProps> = ({
 
   return (
     <div
-      className={`fixed top-0 right-0 z-50 h-screen w-full bg-background transition-opacity duration-300 ease-in-out lg:hidden ${
+      className={`fixed top-0 right-0 z-50 h-full w-full bg-background transition-opacity duration-300 ease-in-out lg:hidden ${
         isOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -55,10 +55,10 @@ const SideNav: React.FC<SideBarProps> = ({
             <div className="bg-text h-0.5 w-full translate-y-1"></div>
           </button>
         </div>
-        <div className="flex flex-col justify-between h-full pb-5 md:flex-row md:justify-center md:items-center w-full mx-auto">
+        <div className="flex flex-col h-full pb-5 md:flex-row md:justify-center md:items-center w-full mx-auto">
           {/* //nav links for mobile */}
-          <div className="flex flex-col h-full mt-10">
-            <nav className="flex flex-col gap-10 text-4xl font-medium md:text-4xl md:gap-10 md:items-start md:">
+          <div className="flex flex-col justify-start h-full md:justify-center md:items-center">
+            <nav className="flex flex-col gap-10 text-4xl font-medium items-start mt-13">
               <button
                 onClick={() => handleClick(refs.aboutRef, 15)}
                 className="cursor-pointer text-left uppercase"
@@ -78,13 +78,14 @@ const SideNav: React.FC<SideBarProps> = ({
                 PROJECTS
               </button>
               <button
-                onClick={() => handleClick(refs.projectRef, 50)}
+                onClick={() => handleClick(refs.contactRef, 50)}
                 className="cursor-pointer text-left uppercase"
               >
                 CONTACTS
               </button>
             </nav>
           </div>
+
           <div className="flex items-center justify-between md:flex-col md:justify-center md:h-full md:ml-20 md:gap-10">
             <div className="group md:text-xl">
               <h1 className="text-darkash">Message me</h1>
