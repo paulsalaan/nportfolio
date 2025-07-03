@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+body {
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Neue Montreal, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* main */
+  --color-subtext: var(--subtext);
+  --color-text: var(--text);
+  --color-background: var(--background);
+  --color-button-bg: var(--button-bg);
+  --color-button-text: var(--button-text);
+  --color-hover-btn: var(--hover-btn);
+  --color-arrowHover: var(--arrowHover);
+  --color-accent: var(--accent);
+
+  /* additional-colors */
+  --color-hover: var(--hover);
+  --color-line: var(--line);
+}
+
+:root {
+  /* main */
+  --subtext: #606266;
+  --text: #343537;
+  --background: #fefefe;
+  --button-bg: #343537;
+  --button-text: #fefefe;
+  --hover-btn: #343537;
+  --arrowHover: #606266;
+  --accent: #a58b84;
+
+  /* additional-colors */
+  --hover: #c7c4c4;
+  --line: #aea7a7;
+}
+
+.dark {
+  --subtext: #c2c5cc;
+  --text: #fefefe;
+  --background: #343537;
+  --button-bg: #fefefe;
+  --button-text: #343537;
+  --hover-btn: #fefefe;
+  --arrowHover: #c7c4c4;
+
+  --hover: #606266;
+  --line: #717171;
+}
+
+::selection {
+  background-color: #c7c4c4;
+}
