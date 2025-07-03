@@ -6,7 +6,6 @@ import FloatingActions from "../components/FloatingActions";
 import TechStack from "@/pages/TechStack";
 import ViewAllStack from "../pages/ViewAllStacks";
 import Project from "@/pages/Projects";
-import Footer from "@/components/Footer";
 import Contact from "@/pages/Contact";
 
 const MainLayout = () => {

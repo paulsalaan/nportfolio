@@ -1,7 +1,6 @@
 import { AnimatedLink } from "@/components/AnimatedLink";
 import { forwardRef } from "react";
 import { HiOutlineArrowSmallUp } from "react-icons/hi2";
-import { TfiArrowTopRight } from "react-icons/tfi";
 
 interface TechStackProps {
   onViewAllClick: () => void;

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <section className="min-h-[calc(100vh-80px)] flex flex-col justify-between w-full py-7 text-text">

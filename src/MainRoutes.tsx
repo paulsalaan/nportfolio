@@ -1,4 +1,3 @@
-import React from "react";
 import MainLayout from "./layout/MainLayout";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
