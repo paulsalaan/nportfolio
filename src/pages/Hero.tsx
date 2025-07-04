@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="min-h-[calc(100vh-80px)] flex flex-col justify-between w-full py-7 text-text">
+    <section className="min-h-[calc(100vh-80px)] flex flex-col justify-between w-full py-10 text-text">
       <div className="flex-1 flex flex-col justify-center py-3">
         <div className="text-left">
           <h1 className="text-[5rem] lg:text-[8rem] font-medium uppercase md:text-[7.5rem] xl:text-[12rem] lg:pl-6">
