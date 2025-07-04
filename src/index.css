@@ -24,6 +24,8 @@ body {
   --color-hover-btn: var(--hover-btn);
   --color-arrowHover: var(--arrowHover);
   --color-accent: var(--accent);
+  --color-vanilla: #fefefe;
+  --color-darkcement: #343537;
 
   /* additional-colors */
   --color-hover: var(--hover);

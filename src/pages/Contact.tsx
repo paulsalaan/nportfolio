@@ -46,7 +46,9 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
         <div className="flex gap-8">
           <div className="group mt-8 inline-block self-end md:cursor-pointer lg:hidden">
             <div className="flex items-center gap-1 text-base lg:text-[14px] xl:text-lg">
-              <a href="#">Github</a>
+              <a href="https://github.com/paulsalaan" target="_blank">
+                Github
+              </a>
               <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
             </div>
 
@@ -57,7 +59,12 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
           </div>
           <div className="group mt-8 inline-block self-end md:cursor-pointer lg:hidden">
             <div className="flex items-center gap-1 text-base lg:text-[14px] xl:text-lg">
-              <a href="#">Instagam</a>
+              <a
+                href="https://www.instagram.com/9.ninn___?igsh=cHhraTVjdXBqM2o1"
+                target="_blank"
+              >
+                Instagam
+              </a>
               <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
             </div>
 
@@ -92,7 +99,9 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
         <div className="hidden lg:flex lg:gap-8 lg:">
           <div className="group mt-8 inline-block self-end md:cursor-pointer">
             <div className="flex items-center gap-1 text-base lg:text-[14px] xl:text-lg">
-              <a href="#">Github</a>
+              <a href="https://github.com/paulsalaan" target="_blank">
+                Github
+              </a>
               <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
             </div>
 
@@ -104,7 +113,12 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
           </div>
           <div className="group mt-8 inline-block self-end md:cursor-pointer">
             <div className="flex items-center gap-1 text-base lg:text-[14px] xl:text-lg">
-              <a href="#">Instagam</a>
+              <a
+                href="https://www.instagram.com/9.ninn___?igsh=cHhraTVjdXBqM2o1"
+                target="_blank"
+              >
+                Instagam
+              </a>
               <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
             </div>
 
