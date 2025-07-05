@@ -1,61 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/favicon.png";
 
 interface LoadingScreenProps {
   isVisible: boolean;
-  onDone?: () => void; // optional: notify when animation is fully complete
+  onDone?: () => void;
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible, onDone }) => {
-  const [blinkNow, setBlinkNow] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
-    let blinkTimeout: NodeJS.Timeout;
-    if (blinkNow) {
-      // After blink ends, you can optionally trigger `onDone`
-      blinkTimeout = setTimeout(() => {
-        onDone?.();
-      }, 1.5 * 5 * 1000); // 1.5s * 5 blinks = 7.5s
+    let timeout: NodeJS.Timeout;
+    if (!isAnimating && onDone) {
+      timeout = setTimeout(onDone, 500); // allow fade out to finish
     }
-    return () => clearTimeout(blinkTimeout);
-  }, [blinkNow, onDone]);
+    return () => clearTimeout(timeout);
+  }, [isAnimating, onDone]);
 
   return (
     <AnimatePresence>
       {isVisible && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-vanilla">
-          {/* Inline style for blink */}
-          <style>{`
-            @keyframes blink {
-              0%, 100% { opacity: 1; }
-              50% { opacity: 0.4; }
-            }
-            .blinking {
-              animation: blink 1.5s ease-in-out 5;
-            }
-          `}</style>
-
-          <motion.div
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: "0%", opacity: 1 }}
-            exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-            onAnimationComplete={() => setBlinkNow(true)} // trigger blink after slide-in
-            className={`flex flex-row items-center justify-center gap-8 ${
-              blinkNow ? "blinking" : ""
-            }`}
-          >
-            <img
-              src={Logo}
-              alt="logo_image"
-              className="size-30 md:size-33 lg:size-36 object-contain"
-            />
-            <p className="hidden uppercase md:block text-xl md:text-2xl lg:text-3xl 2xl:text-5xl font-medium text-darkcement">
-              NIÑO SALAAN
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: isAnimating ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <motion.img
+            src={Logo}
+            alt="logo_image"
+            className="size-36 object-contain"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 720 }} // 2 full spins
+            transition={{ duration: 2.5, ease: "easeInOut" }}
+            onAnimationComplete={() => setIsAnimating(false)}
+          />
+        </motion.div>
       )}
     </AnimatePresence>
   );
