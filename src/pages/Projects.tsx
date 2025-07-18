@@ -225,7 +225,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
           </div>
           <div className="group hidden self-end md:cursor-pointer lg:mt-4 lg:inline-block 2xl:mt-6">
             <div className="flex items-center gap-1">
-              <a href="#">View Github repository</a>
+              <a href="#">View in Figma</a>
               <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
             </div>
 
@@ -261,7 +261,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
         </div>
         <div className="group inline-block mt-8 self-end md:cursor-pointer lg:hidden">
           <div className="flex items-center gap-1 text-base">
-            <a href="#">View Github repository</a>
+            <a href="#">View in Figma</a>
             <HiOutlineArrowSmallUp className="size-5 stroke-[1.5px] rotate-[45deg]" />
           </div>
 

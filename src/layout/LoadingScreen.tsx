@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Logo from "../assets/favicon.png";
+import LoadingLogo from "@/assets/loading_fav.png";
 
 interface LoadingScreenProps {
   isVisible: boolean;
@@ -29,7 +29,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible, onDone }) => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <motion.img
-            src={Logo}
+            src={LoadingLogo}
             alt="logo_image"
             className="size-36 object-contain"
             initial={{ rotate: 0 }}

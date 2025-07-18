@@ -11,7 +11,10 @@ import Contact from "@/pages/Contact";
 
 const MainLayout: React.FC = () => {
   const [showStacks, setShowStacks] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    const alreadyVisited = sessionStorage.getItem("hasVisited");
+    return !alreadyVisited;
+  });
 
   const aboutRef = useRef<HTMLElement | null>(null);
   const techRef = useRef<HTMLElement | null>(null);
@@ -21,7 +24,8 @@ const MainLayout: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // adjust duration as needed
+      sessionStorage.setItem("hasVisited", "true");
+    }, 3000); // adjust duration as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -43,8 +47,8 @@ const MainLayout: React.FC = () => {
 
   return (
     <>
+      {/* loading-screen  */}
       <LoadingScreen isVisible={isLoading} />
-
       {/* Only render content when not loading, or fade in using opacity */}
       <div
         className={`transition-opacity duration-500 ${

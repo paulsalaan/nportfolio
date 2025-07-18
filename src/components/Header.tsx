@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ onScroll, refs }) => {
             </div>
           </div>
 
-          <nav className="hidden lg:flex lg:uppercase 2xl:gap-15 lg:text-[15px] lg:gap-5 2xl:text-[18px]">
+          <nav className="hidden lg:flex lg:uppercase 2xl:gap-15 lg:text-[15px] lg:gap-5 2xl:text-xl">
             <button
               onClick={() => onScroll(refs.aboutRef, 40)}
               className="cursor-pointer transition-transform duration-200 hover:translate-x-1"
